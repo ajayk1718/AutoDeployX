@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/ajayk1718/AutoDeployX.git'
-            }
-        }
-
         stage('Build Docker Images') {
             steps {
                 dir('farmer-market-portal') {

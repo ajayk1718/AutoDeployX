@@ -6,7 +6,7 @@ pipeline {
         stage('Build Docker Images') {
             steps {
                 dir('farmer-market-portal') {
-                    sh 'docker compose build'
+                    bat 'docker compose build'
                 }
             }
         }
@@ -14,7 +14,7 @@ pipeline {
         stage('Run Containers') {
             steps {
                 dir('farmer-market-portal') {
-                    sh 'docker compose up -d'
+                    bat 'docker compose up -d'
                 }
             }
         }
